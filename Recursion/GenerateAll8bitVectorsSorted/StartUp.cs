@@ -16,7 +16,7 @@
         {
             if (index > vector.Length - 1)
             {
-                Console.WriteLine(string.Join(" ", vector));
+                Console.WriteLine(string.Join("", vector));
             }
             else
             {
