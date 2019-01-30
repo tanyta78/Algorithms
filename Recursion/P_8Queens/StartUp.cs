@@ -7,17 +7,17 @@
     {
         private const int Size = 8;
         static bool[,] board = new bool[Size, Size];
+        private static int solutionsFound = 0;
 
         static HashSet<int> attackedRows = new HashSet<int>();
         static HashSet<int> attackedCols = new HashSet<int>();
         static HashSet<int> attackedLeftDiagonals = new HashSet<int>();
         private static HashSet<int> attackedRightDiagonals = new HashSet<int>();
-        private static int count;
 
         public static void Main()
         {
             PlaceQueen(0);
-         
+           // Console.WriteLine(solutionsFound);
         }
 
         private static void PlaceQueen(int row)
@@ -79,7 +79,7 @@
             }
             Console.WriteLine();
 
-            count++;
+            solutionsFound++;
         }
     }
 }

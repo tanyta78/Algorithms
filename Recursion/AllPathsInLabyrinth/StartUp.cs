@@ -3,68 +3,97 @@ using System.Collections.Generic;
 
 namespace AllPathsInLabyrinth
 {
+    using System.Linq;
+
     public class StartUp
     {
         static List<char> path = new List<char>();
-
-        static char[,] lab =
-            {
-                {'-', '-', '-', '*', '-', '-', '-'},
-                {'*', '*', '-', '*', '-', '*', '-'},
-                {'-', '-', '-', '-', '-', '-', '-'},
-                {'-', '*', '*', '*', '*', '*', '-'},
-                {'-', '-', '-', '-', '-', '-', 'e'},
-            };
-
-
+        private static char[,] labyrinth;
 
         public static void Main()
         {
+            labyrinth = ReadLabyrinth();
             FindPaths(0, 0, 's');
+        }
+
+        private static char[,] ReadLabyrinth()
+        {
+            int rows = int.Parse(Console.ReadLine());
+            int cols = int.Parse(Console.ReadLine());
+
+            char[,] labyrinth = new char[rows, cols];
+
+            for (int i = 0; i < labyrinth.GetLength(0); i++)
+            {
+                string line = Console.ReadLine();
+
+                for (int j = 0; j < labyrinth.GetLength(1); j++)
+                {
+                    labyrinth[i, j] = line[j];
+                }
+            }
+
+            return labyrinth;
         }
 
         private static void FindPaths(int row, int col, char direction)
         {
-            if (!IsValidCell(row, col))
+            if (!IsInBounds(row, col))
             {
                 return;
             }
-           
+
             path.Add(direction);
 
-            if (lab[row, col] == 'e')
+            if (IsExit(row, col))
             {
                 PrintPath();
             }
-            else if (lab[row, col] != 'v')
+            else if (IsFree(row, col))
             {
-                lab[row, col] = 'v';
-
+                Mark(row, col);
                 FindPaths(row, col + 1, 'R');
                 FindPaths(row + 1, col, 'D');
                 FindPaths(row, col - 1, 'L');
                 FindPaths(row - 1, col, 'U');
-
-                lab[row, col] = '-';
+                UnMark(row, col);
 
             }
             path.RemoveAt(path.Count - 1);
 
         }
 
-        private static void PrintPath()
+        private static bool IsExit(int row, int col)
         {
-
-            Console.WriteLine(string.Join("", path));
+            return labyrinth[row, col] == 'e';
         }
 
-        private static bool IsValidCell(int row, int col)
+        private static void UnMark(int row, int col)
         {
-            return row >= 0 &&
-                row < lab.GetLength(0) &&
-                col >= 0 &&
-                col < lab.GetLength(1) &&
-                lab[row, col] != '*';
+            labyrinth[row, col] = '-';
+        }
+
+        private static void Mark(int row, int col)
+        {
+            labyrinth[row, col] = 'v';
+        }
+
+        private static bool IsFree(int row, int col)
+        {
+            return labyrinth[row, col] == '-';
+        }
+
+       private static void PrintPath()
+        {
+            Console.WriteLine(String.Join(String.Empty, path.Skip(1)));
+        }
+
+        private static bool IsInBounds(int row, int col)
+        {
+            bool isRowExisting = row >= 0 && row < labyrinth.GetLength(0);
+            bool isColExisting = col >= 0 && col < labyrinth.GetLength(1);
+
+            return isRowExisting && isColExisting;
         }
     }
 }
