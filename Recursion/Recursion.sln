@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_TowerOfHanoi", "P04_Tow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_CombinationsWithoutRepetitions", "P05_CombinationsWithoutRepetitions\P05_CombinationsWithoutRepetitions.csproj", "{5AC42CEA-CA9C-4723-BF31-B1D944FA3618}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06P_ConnectedAreasInMatrix", "06P_ConnectedAreasInMatrix\06P_ConnectedAreasInMatrix.csproj", "{B19E584C-D256-4465-B9F8-BEF7072F4025}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{5AC42CEA-CA9C-4723-BF31-B1D944FA3618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AC42CEA-CA9C-4723-BF31-B1D944FA3618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AC42CEA-CA9C-4723-BF31-B1D944FA3618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19E584C-D256-4465-B9F8-BEF7072F4025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19E584C-D256-4465-B9F8-BEF7072F4025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19E584C-D256-4465-B9F8-BEF7072F4025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19E584C-D256-4465-B9F8-BEF7072F4025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
