@@ -1,21 +1,37 @@
 ﻿namespace P02_NestedLoopsToRecursion
 {
     using System;
-
+   
     public class Program
     {
-       public static void Main(string[] args)
+        private static int[] loops;
+
+        public static void Main(string[] args)
         {
-            int number = int.Parse(Console.ReadLine());
-            int[] arr = new int[number];
-            int index = 0;
-            GenerateValues(arr, index, number);
+            int loopsCount = int.Parse(Console.ReadLine());
+            loops = new int[loopsCount];
+            NestedLoops(loopsCount, 0);
 
         }
 
-        private static void GenerateValues(int[] arr, int index, int number)
+        private static void NestedLoops(int loopsCount, int currentLoop)
         {
-            throw new NotImplementedException();
+            if (currentLoop==loopsCount)
+            {
+                Print(loops);
+                return;
+            }
+
+            for (int counter = 1; counter <= loopsCount; counter++)
+            {
+                loops[currentLoop] = counter;
+                NestedLoops(loopsCount,currentLoop+1);
+            }
+        }
+
+        private static void Print(int[] loops)
+        {
+            Console.WriteLine(String.Join(" ", loops));
         }
     }
 }
