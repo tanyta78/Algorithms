@@ -17,29 +17,34 @@
                     minValue = data[i];
             }
 
-            List<int>[] bucket = new List<int>[maxValue - minValue + 1];
+            LinkedList<int>[] bucket = new LinkedList<int>[maxValue - minValue + 1];
 
             //a sorting algorithm that works by partitioning an array into a number buckets
-            for (int i = 0; i < bucket.Length; i++)
-            {
-                bucket[i] = new List<int>();
-            }
-
+           
+            //move items to bucket
             for (int i = 0; i < data.Length; i++)
             {
-                bucket[data[i] - minValue].Add(data[i]);
+                if (bucket[data[i] - minValue]==null)
+                {
+                    bucket[data[i] - minValue]=new LinkedList<int>();
+                }
+
+                bucket[data[i] - minValue].AddLast(data[i]);
             }
 	
             //Each bucket then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm.
-
+            //Move items in the bucket back to the original array in order
             int k = 0;
             for (int i = 0; i < bucket.Length; i++)
             {
-                if (bucket[i].Count > 0)
+                if (bucket[i] != null)
                 {
-                    for (int j = 0; j < bucket[i].Count; j++)
+                    LinkedListNode<int> node = bucket[i].First; //start add head of linked list
+
+                    while (node != null)
                     {
-                        data[k] = bucket[i][j];
+                        data[k] = node.Value; //get value of current linked node
+                        node = node.Next; //move to next linked node
                         k++;
                     }
                 }
