@@ -14,6 +14,7 @@
 
         private static void Sort(T[] arr, int start, int end)
         {
+            //split each element into partitions of size 1
             if (start >= end)
             {
                 return;
@@ -22,6 +23,8 @@
             int middle = start + (end - start) / 2;
             Sort(arr, start, middle);
             Sort(arr, middle + 1, end);
+
+            //recursively merge partitions
             Merge(arr, start, middle, end);
         }
 
@@ -37,26 +40,26 @@
                 aux[i] = arr[i];
             }
 
-            var first = start;
-            var second = middle + 1;
+            var leftPartStartIndex = start;
+            var rightPartStartIndex = middle + 1;
 
             for (int k = start; k <= end; k++)
             {
-                if(first> middle)
+                if(leftPartStartIndex> middle)
                 {
-                    arr[k] = aux[second++];
+                    arr[k] = aux[rightPartStartIndex++];
                 }
-                else if(second > end)
+                else if(rightPartStartIndex > end)
                 {
-                    arr[k] = aux[first++];
+                    arr[k] = aux[leftPartStartIndex++];
                 }
-                else if(Helpers.IsLess(aux[first], aux[second]))
+                else if(Helpers.IsLess(aux[leftPartStartIndex], aux[rightPartStartIndex]))
                 {
-                    arr[k] = aux[first++];
+                    arr[k] = aux[leftPartStartIndex++];
                 }
                 else
                 {
-                    arr[k] = aux[second++];
+                    arr[k] = aux[rightPartStartIndex++];
                 }
             }
         }

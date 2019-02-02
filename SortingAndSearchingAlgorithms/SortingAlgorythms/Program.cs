@@ -19,8 +19,14 @@
             //InsertionSort
             // Insertion.Sort(numbers);
 
-            // Console.WriteLine(string.Join(", ", numbers));
-            // Console.WriteLine(Helpers.IsSorted(numbers));
+
+            //Merge sort
+           // MergeSort<int>.Sort(numbers);
+
+           //Quick Sort
+
+             Console.WriteLine(string.Join(", ", numbers));
+             Console.WriteLine(Helpers.IsSorted(numbers));
 
             //Shuffle.FisherYatesAlgo(ordered);
             //Console.WriteLine(string.Join(", ", ordered));
