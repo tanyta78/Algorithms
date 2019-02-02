@@ -27,7 +27,10 @@
           // QuickSort.Sort(numbers);
 
            //CountingSort
-           CountingSort.Sort(numbers);
+          //CountingSort.Sort(numbers);
+
+           //BucketSort
+           BucketSort.Sort(ref numbers);
 
              Console.WriteLine(string.Join(", ", numbers));
              Console.WriteLine(Helpers.IsSorted(numbers));

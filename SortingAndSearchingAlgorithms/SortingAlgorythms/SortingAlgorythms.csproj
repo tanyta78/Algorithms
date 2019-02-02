@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bubble.cs" />
+    <Compile Include="BucketSort.cs" />
     <Compile Include="CountingSort.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Insertion.cs" />
