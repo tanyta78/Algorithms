@@ -24,6 +24,10 @@
            // MergeSort<int>.Sort(numbers);
 
            //Quick Sort
+          // QuickSort.Sort(numbers);
+
+           //CountingSort
+           CountingSort.Sort(numbers);
 
              Console.WriteLine(string.Join(", ", numbers));
              Console.WriteLine(Helpers.IsSorted(numbers));
