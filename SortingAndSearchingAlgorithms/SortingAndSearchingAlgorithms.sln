@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchingAlgorithms", "Sear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InversionCount", "InversionCount\InversionCount.csproj", "{41C6E275-8EF4-4EA2-8E9F-92389A857A8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Words", "Words\Words.csproj", "{2CB22289-D729-4038-83AA-10974B8BA01F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{41C6E275-8EF4-4EA2-8E9F-92389A857A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41C6E275-8EF4-4EA2-8E9F-92389A857A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41C6E275-8EF4-4EA2-8E9F-92389A857A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB22289-D729-4038-83AA-10974B8BA01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB22289-D729-4038-83AA-10974B8BA01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB22289-D729-4038-83AA-10974B8BA01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB22289-D729-4038-83AA-10974B8BA01F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
