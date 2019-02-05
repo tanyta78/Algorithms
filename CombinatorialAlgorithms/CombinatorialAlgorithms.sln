@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutations", "Permutations\Permutations.csproj", "{07A14066-EAB9-4DCA-8755-4177949560BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermutationsWithRepetitions", "PermutationsWithRepetitions\PermutationsWithRepetitions.csproj", "{ED035AA6-F57A-463B-AF42-3F39830486A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermutationsIterative", "PermutationsIterative\PermutationsIterative.csproj", "{C575F431-CEC5-467D-9378-4953333E5E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickPermAlgo", "QuickPermAlgo\QuickPermAlgo.csproj", "{C5920D2E-5C0D-4999-92E7-4241C499900F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermAlgosCompare", "PermAlgosCompare\PermAlgosCompare.csproj", "{22DE6C79-85DB-4173-AF1A-BB0E89EBAABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerWithRepIterative", "PerWithRepIterative\PerWithRepIterative.csproj", "{FBA9F556-D1AC-4215-A96D-05DD82642C06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{07A14066-EAB9-4DCA-8755-4177949560BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07A14066-EAB9-4DCA-8755-4177949560BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07A14066-EAB9-4DCA-8755-4177949560BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED035AA6-F57A-463B-AF42-3F39830486A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED035AA6-F57A-463B-AF42-3F39830486A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED035AA6-F57A-463B-AF42-3F39830486A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED035AA6-F57A-463B-AF42-3F39830486A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C575F431-CEC5-467D-9378-4953333E5E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C575F431-CEC5-467D-9378-4953333E5E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C575F431-CEC5-467D-9378-4953333E5E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C575F431-CEC5-467D-9378-4953333E5E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5920D2E-5C0D-4999-92E7-4241C499900F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5920D2E-5C0D-4999-92E7-4241C499900F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5920D2E-5C0D-4999-92E7-4241C499900F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5920D2E-5C0D-4999-92E7-4241C499900F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DE6C79-85DB-4173-AF1A-BB0E89EBAABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DE6C79-85DB-4173-AF1A-BB0E89EBAABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DE6C79-85DB-4173-AF1A-BB0E89EBAABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DE6C79-85DB-4173-AF1A-BB0E89EBAABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

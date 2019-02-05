@@ -10,7 +10,33 @@
 
         public static void Main(string[] args)
         {
-            GeneratePermutations(0);
+            //GeneratePermutations(0);
+            GeneratePermutationsWithSwapAlgo(0);
+        }
+
+        private static void GeneratePermutationsWithSwapAlgo(int index)
+        {
+            if (index >= elements.Length)
+            {
+                Console.WriteLine(string.Join("", elements));
+            }
+            else
+            {
+                GeneratePermutationsWithSwapAlgo(index+1);
+                for (int i = index + 1; i < elements.Length; i++)
+                {
+                    Swap(index, i);
+                    GeneratePermutationsWithSwapAlgo(index+1);
+                    Swap(index, i);
+                }
+            }
+        }
+
+        private static void Swap(int i, int j)
+        {
+            var temp = elements[i];
+            elements[i] = elements[j];
+            elements[j] = temp;
         }
 
         private static void GeneratePermutations(int index)
