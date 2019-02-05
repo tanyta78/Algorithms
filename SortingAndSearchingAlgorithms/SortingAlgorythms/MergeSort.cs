@@ -4,62 +4,65 @@
 
     public class MergeSort<T> where T : IComparable
     {
-        private static T[] aux;
+        private static T[] helper;
 
         public static void Sort(T[] arr)
         {
-            aux = new T[arr.Length];
+            helper = new T[arr.Length];
             Sort(arr, 0, arr.Length - 1);
         }
 
-        private static void Sort(T[] arr, int start, int end)
+        private static void Sort(T[] arr, int startIndex, int endIndex)
         {
             //split each element into partitions of size 1
-            if (start >= end)
+            if (startIndex >= endIndex)
             {
                 return;
             }
 
-            int middle = start + (end - start) / 2;
-            Sort(arr, start, middle);
-            Sort(arr, middle + 1, end);
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+            Sort(arr, startIndex, middleIndex);
+            Sort(arr, middleIndex + 1, endIndex);
 
             //recursively merge partitions
-            Merge(arr, start, middle, end);
+            Merge(arr, startIndex, middleIndex, endIndex);
         }
 
-        private static void Merge(T[] arr, int start, int middle, int end)
+        private static void Merge(T[] arr, int startIndex, int middleIndex, int endIndex)
         {
-            if (Helpers.IsLess(arr[middle], arr[middle + 1]))
+            if (
+                middleIndex < 0
+            || middleIndex + 1 >= arr.Length
+            || Helpers.IsLess(arr[middleIndex], arr[middleIndex + 1]))
             {
                 return;
             }
 
-            for (int i = start; i < end + 1; i++)
+            for (int i = startIndex; i < endIndex + 1; i++)
             {
-                aux[i] = arr[i];
+                helper[i] = arr[i];
             }
 
-            var leftPartStartIndex = start;
-            var rightPartStartIndex = middle + 1;
+            var leftPartStartIndex = startIndex;
+            var rightPartStartIndex = middleIndex + 1;
 
-            for (int k = start; k <= end; k++)
+            for (int k = startIndex; k <= endIndex; k++)
             {
-                if(leftPartStartIndex> middle)
+                if (leftPartStartIndex > middleIndex)
                 {
-                    arr[k] = aux[rightPartStartIndex++];
+                    arr[k] = helper[rightPartStartIndex++];
                 }
-                else if(rightPartStartIndex > end)
+                else if (rightPartStartIndex > endIndex)
                 {
-                    arr[k] = aux[leftPartStartIndex++];
+                    arr[k] = helper[leftPartStartIndex++];
                 }
-                else if(Helpers.IsLess(aux[leftPartStartIndex], aux[rightPartStartIndex]))
+                else if (Helpers.IsLess(helper[leftPartStartIndex], helper[rightPartStartIndex]))
                 {
-                    arr[k] = aux[leftPartStartIndex++];
+                    arr[k] = helper[leftPartStartIndex++];
                 }
                 else
                 {
-                    arr[k] = aux[rightPartStartIndex++];
+                    arr[k] = helper[rightPartStartIndex++];
                 }
             }
         }
