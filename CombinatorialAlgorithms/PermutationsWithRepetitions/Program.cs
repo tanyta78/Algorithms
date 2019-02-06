@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace PermutationsWithRepetitions
+﻿namespace PermutationsWithRepetitions
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class Program
     {
@@ -11,15 +11,16 @@ namespace PermutationsWithRepetitions
 
         public static void Main(string[] args)
         {
-           // Gen(0);
-           PermutateRep(0,arr.Length-1);
+            elements = Console.ReadLine().Split(' ').ToArray();
+            Gen(0);
+           // PermutateRep(0, arr.Length - 1);
         }
 
         private static void Gen(int index)
         {
             if (index >= elements.Length)
             {
-                Console.WriteLine(string.Join("", elements));
+                Console.WriteLine(string.Join(" ", elements));
             }
             else
             {
@@ -31,15 +32,15 @@ namespace PermutationsWithRepetitions
                     if (!used.Contains(elements[i]))
                     {
                         used.Add(elements[i]);
-                        Swap(elements,index, i);
+                        Swap(elements, index, i);
                         Gen(index + 1);
-                        Swap(elements,index, i);
+                        Swap(elements, index, i);
                     }
                 }
             }
         }
 
-        private static void Swap<T>(T[]collection,int i, int j)
+        private static void Swap<T>(T[] collection, int i, int j)
         {
             var temp = collection[i];
             collection[i] = collection[j];
@@ -56,13 +57,13 @@ namespace PermutationsWithRepetitions
                 {
                     if (arr[left] != arr[right])
                     {
-                        Swap(arr,left,right);
+                        Swap(arr, left, right);
                         PermutateRep(left + 1, end);
                     }
                 }
 
                 var firstElement = arr[left];
-                for (int i = left; i <= end-1; i++)
+                for (int i = left; i <= end - 1; i++)
                 {
                     arr[i] = arr[i + 1];
                 }

@@ -15,6 +15,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermAlgosCompare", "PermAlg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerWithRepIterative", "PerWithRepIterative\PerWithRepIterative.csproj", "{FBA9F556-D1AC-4215-A96D-05DD82642C06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variations", "Variations\Variations.csproj", "{1ECD9FA3-F451-4D3A-8CEF-4FE84C92677F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariationsWithRep", "VariationsWithRep\VariationsWithRep.csproj", "{F8826DB6-99F1-4F82-9A21-CC8D177125EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariationWithRepIterative", "VariationWithRepIterative\VariationWithRepIterative.csproj", "{222B9019-6F4E-483B-A322-DCBB6231992B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinations\Combinations.csproj", "{AC756271-EDCB-4CB6-A708-7C7751E55075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationWithRepetition", "CombinationWithRepetition\CombinationWithRepetition.csproj", "{A4B83BCB-8EFB-4032-8C6C-9E18825E3384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +55,26 @@ Global
 		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA9F556-D1AC-4215-A96D-05DD82642C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECD9FA3-F451-4D3A-8CEF-4FE84C92677F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECD9FA3-F451-4D3A-8CEF-4FE84C92677F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECD9FA3-F451-4D3A-8CEF-4FE84C92677F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECD9FA3-F451-4D3A-8CEF-4FE84C92677F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8826DB6-99F1-4F82-9A21-CC8D177125EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8826DB6-99F1-4F82-9A21-CC8D177125EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8826DB6-99F1-4F82-9A21-CC8D177125EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8826DB6-99F1-4F82-9A21-CC8D177125EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{222B9019-6F4E-483B-A322-DCBB6231992B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222B9019-6F4E-483B-A322-DCBB6231992B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222B9019-6F4E-483B-A322-DCBB6231992B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222B9019-6F4E-483B-A322-DCBB6231992B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC756271-EDCB-4CB6-A708-7C7751E55075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC756271-EDCB-4CB6-A708-7C7751E55075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC756271-EDCB-4CB6-A708-7C7751E55075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC756271-EDCB-4CB6-A708-7C7751E55075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B83BCB-8EFB-4032-8C6C-9E18825E3384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B83BCB-8EFB-4032-8C6C-9E18825E3384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B83BCB-8EFB-4032-8C6C-9E18825E3384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B83BCB-8EFB-4032-8C6C-9E18825E3384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
