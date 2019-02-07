@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PascalTriangle", "PascalTri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01Snakes", "P01Snakes\P01Snakes.csproj", "{BFE778E7-FCEF-4F5D-B646-5CF7495EC621}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02Cubes", "P02Cubes\P02Cubes.csproj", "{6F931E62-FF86-452F-B35C-601A8C1EFAF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BFE778E7-FCEF-4F5D-B646-5CF7495EC621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFE778E7-FCEF-4F5D-B646-5CF7495EC621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFE778E7-FCEF-4F5D-B646-5CF7495EC621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F931E62-FF86-452F-B35C-601A8C1EFAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F931E62-FF86-452F-B35C-601A8C1EFAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F931E62-FF86-452F-B35C-601A8C1EFAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F931E62-FF86-452F-B35C-601A8C1EFAF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
