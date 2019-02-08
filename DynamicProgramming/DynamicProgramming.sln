@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LISIterative", "LISIterative\LISIterative.csproj", "{6C214023-1630-4906-B435-0D25C78DA490}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveDownRightSum", "MoveDownRightSum\MoveDownRightSum.csproj", "{11F5ADC0-8935-4A6E-AF45-657FCDE32B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RodCutting", "RodCutting\RodCutting.csproj", "{D84B0F23-536A-4DF5-A595-7060A063315F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6C214023-1630-4906-B435-0D25C78DA490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C214023-1630-4906-B435-0D25C78DA490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C214023-1630-4906-B435-0D25C78DA490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F5ADC0-8935-4A6E-AF45-657FCDE32B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F5ADC0-8935-4A6E-AF45-657FCDE32B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F5ADC0-8935-4A6E-AF45-657FCDE32B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F5ADC0-8935-4A6E-AF45-657FCDE32B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84B0F23-536A-4DF5-A595-7060A063315F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84B0F23-536A-4DF5-A595-7060A063315F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84B0F23-536A-4DF5-A595-7060A063315F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84B0F23-536A-4DF5-A595-7060A063315F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
