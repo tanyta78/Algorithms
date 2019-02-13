@@ -1,91 +1,84 @@
 ﻿namespace Words
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     public class Program
     {
-        private static int counter = 0;
-        private static int count;
+        private static int count = 0;
+        private static char[] word;
 
         public static void Main(string[] args)
         {
-            var word = Console.ReadLine().OrderBy(ch => ch).ToArray();
-            count = word.Length;
-            bool noRepetition = IsValid(word);
-            if (noRepetition)
+            var input = Console.ReadLine();
+            word = input.ToCharArray();
+
+            bool allUnique = IsUnique(input);
+
+            if (allUnique)
             {
-                int result = CalculateFactorial(count);
-                Console.WriteLine(result);
-                return;
+                CalculateFactorial(input);
+            }
+            else
+            {
+                Permutate(0);
             }
 
-            Permutate(word, 0, word.Length);
-            Console.WriteLine(counter);
+            Console.WriteLine(count);
         }
 
-        private static int CalculateFactorial(int count)
+        private static bool IsUnique(string input)
         {
-            int factorial = 1;
-            for (int i = 2; i <= count; i++)
+            return input.Distinct().Count() == input.Length;
+        }
+
+        private static void CalculateFactorial(string input)
+        {
+            count = 1;
+            for (int i = 1; i <= input.Length; i++)
             {
-                factorial *= i;
+                count *= i;
             }
-
-            return factorial;
         }
 
-        private static bool IsValid(char[] word)
+        private static void Permutate(int start)
         {
-            for (int i = 1; i < count; i++)
+            if (start >= word.Length)
             {
-                if (word[i] == word[i - 1])
+                for (int i = 1; i < word.Length; i++)
                 {
-                    return false;
+                    if (word[i] == word[i - 1])
+                    {
+                        return;
+                    }
                 }
+                count++;
             }
-
-            counter++;
-            return true;
-        }
-
-        private static void Permutate(char[] word, int start, int wordLenght)
-        {
-            if (start < wordLenght)
+            else
             {
-                for (int i = wordLenght - 2; i >= start; i--)
+                var swapped = new HashSet<int>();
+                for (int i = start; i < word.Length; i++)
                 {
-                    for (int j = i + 1; j < wordLenght; j++)
+                    if (!swapped.Contains(word[i]))
                     {
-                        if (word[i] != word[j])
-                        {
-                            Swap(ref word[i], ref word[j]);
-                            IsValid(word);
-                            Permutate(word, i + 1, wordLenght);
-                        }
+                        Swap(start, i);
+                        Permutate(start + 1);
+                        Swap(start, i);
+                        swapped.Add(word[i]);
                     }
-
-                    char tmp = word[i];
-                    for (int k = i; k < wordLenght - 1;)
-                    {
-                        word[k] = word[++k];
-                    }
-
-                    word[wordLenght - 1] = tmp;
                 }
             }
         }
 
-        private static void Swap(ref char i, ref char j)
+        private static void Swap(int first, int second)
         {
-            if (i == j)
-            {
-                return;
-            }
-
-            i ^= j;
-            j ^= i;
-            i ^= j;
+            var temp = word[first];
+            word[first] = word[second];
+            word[second] = temp;
         }
+
     }
 }
+
+
