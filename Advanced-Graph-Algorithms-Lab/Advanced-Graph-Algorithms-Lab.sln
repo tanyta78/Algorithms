@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kurskal", "Kurskal\Kurskal.csproj", "{22106E58-7227-41EA-A4C9-69C3F38E7DE5}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dijkstra", "Dijkstra\Dijkstra.csproj", "{C1AE96D3-422B-4A66-A9DC-BC456A15B12A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dijkstra.Tests", "Dijkstra.Tests\Dijkstra.Tests.csproj", "{8EE0B665-9E3B-4566-8361-D82E49530420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimAlgoForMst", "PrimAlgoForMst\PrimAlgoForMst.csproj", "{41A44D59-EDEF-45F9-B658-9AA07A1B4849}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,8 +47,15 @@ Global
 		{8EE0B665-9E3B-4566-8361-D82E49530420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE0B665-9E3B-4566-8361-D82E49530420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE0B665-9E3B-4566-8361-D82E49530420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A44D59-EDEF-45F9-B658-9AA07A1B4849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A44D59-EDEF-45F9-B658-9AA07A1B4849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A44D59-EDEF-45F9-B658-9AA07A1B4849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A44D59-EDEF-45F9-B658-9AA07A1B4849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD24D050-06BA-4A99-8BCE-C86051EDFBD4}
 	EndGlobalSection
 EndGlobal

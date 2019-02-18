@@ -37,20 +37,27 @@ namespace Kurskal
 
         public static int FindRoot(int node, int[] parent)
         {
-            int root = node;
-            while (parent[root] != root)
+            //int root = node;
+            //while (parent[root] != root)
+            //{
+            //    root = parent[root];
+            //}
+
+            //while (node != root)
+            //{
+            //    int previousParent = parent[node];
+            //    parent[node] = root;
+            //    node = previousParent;
+            //}
+
+            //return root;
+
+            while (parent[node] != node)
             {
-                root = parent[root];
+                node = parent[node];
             }
 
-            while (node != root)
-            {
-                int previousParent = parent[node];
-                parent[node] = root;
-                node = previousParent;
-            }
-
-            return root;
+            return node;
         }
     }
 }
